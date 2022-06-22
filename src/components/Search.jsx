@@ -1,10 +1,10 @@
 import React,{useState} from 'react';
 import '../styles/Search.css';
 
-const Search = ({send}) => {
+const Search = ({state,send}) => {
 
     const [flight, setFlight] = useState('');
-    const options =['Mexico','Venezuela','Colombia'];
+    const options = state.context.countries;
 
     const goToPassengers = () => {
         
@@ -34,8 +34,8 @@ const Search = ({send}) => {
                     Escoge un Pais 
                 </option>
                 {options.map((option) => 
-                    <option value={option} key={option}>
-                        {option}
+                    <option value={option.name.common} key={option.name.common}>
+                        {option.name.common}
                     </option>)}
             </select>
             <button 
