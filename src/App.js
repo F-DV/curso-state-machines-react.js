@@ -1,4 +1,4 @@
-import { BaseLayout } from '././components/BaseLayout';
+import { BaseLayout } from './containers/BaseLayout';
 import './App.css';
 
 function App() {
@@ -8,5 +8,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
