@@ -20,6 +20,11 @@ const Tickets = ({send,context}) => {
                     <span>
                         ✈
                     </span>
+                    {context.passengers.map((person, idx) => {
+                            return <p key={idx}>
+                                {person}
+                            </p>
+                        } )}
                 </div>
             </div>
             <button onClick={finish} className='Tickets-finalizar button'>
